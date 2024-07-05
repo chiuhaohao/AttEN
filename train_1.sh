@@ -1,0 +1,3 @@
+# CUDA_LAUNCH_BLOCKING=1 python3 train_resnet18_AttEN_fitz.py --training_title 20231130_train_resnet18_fitz_AttEN_sp3_ablation_snnl --epochs 200 --lr 0.01 --batch_size 256 --dataset fitzpatrick17k_mask --model resnet18 --class_num 114 --group_num 2 --image_size 256 --image_crop_size 224 --Lambda 5.0 --sigma 0.5 --alpha 0.01 --prompt True --split_num 3
+
+# CUDA_VISIBLE_DEVICES=0 python3 train_resnet18_AttEN_fitz.py --training_title 20231130_train_resnet18_fitz_AttEN_sp2_ablation_snnl --epochs 200 --lr 0.01 --batch_size 256 --dataset fitzpatrick17k_mask --model resnet18 --class_num 114 --group_num 2 --image_size 256 --image_crop_size 224 --Lambda 5.0 --sigma 0.5 --alpha 0.01 --prompt True --split_num 2
