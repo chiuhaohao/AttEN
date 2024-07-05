@@ -18,11 +18,8 @@ pip install -r requirements.txt
 For training, using the command in train.sh to train the AttEN model.
 The command is as follow
 ```bash
-python3 [script name] --training_title [folder title] --epochs [num of epoch] --lr [learning rate] --batch_size [batch size] --dataset [isic2019 or fitzpatrick17k] --model [model type] --class_num [8 or 114]  
+CUDA_VISIBLE_DEVICES=0 python3 [script name] --training_title [title name] --epochs [num of epoch] --lr [learning rate] --batch_size [batch size] --dataset [isic2019_mask or fitzpatrick17k_mask] --model [model type] --class_num [8 or 114] --group_num 2 --image_size 256 --image_crop_size 224 --Lambda 5.0 --sigma 0.5 --alpha 0.01 --prompt True --split_num [data split num]
 ```
 
 ## Evaluation
-Using eval_me.py to evaluate the accuracy and fairness scores for model.
-```bash
-python3 eval.py
-```
+The training code will evaluate the model automatically.
