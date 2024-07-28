@@ -106,13 +106,6 @@ def cnn_train(model, data, epochs, optimizer, scheduler, device='cuda', tensor_b
             
             target_snnl = t_id_snnl = s_id_snnl = sensitive_snnl = 0
             
-            # v1
-            for idx, residual_feature in enumerate(attention_feature):
-                t_id_snnl = SNNL(residual_feature, b_y)
-                if (torch.isnan(t_id_snnl) or torch.isinf(t_id_snnl)):
-                    continue
-                target_snnl += t_id_snnl 
-            
             # Here for SNNL
             for idx, residual_feature in enumerate(attention_feature):
                 t_id_snnl = SNNL(residual_feature, b_y)
